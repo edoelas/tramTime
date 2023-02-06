@@ -1,0 +1,10 @@
+
+version: "3.1"
+stories:
+- story: travel_info
+  steps:
+  - intent: hi
+  - action: utter_hi
+  - intent: input_stations
+  # - action: utter_stations
+  - action: action_tram

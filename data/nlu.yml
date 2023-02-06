@@ -1,0 +1,470 @@
+version: "3.1"
+
+nlu:
+
+- lookup: station
+  examples: |
+    - À Punt
+    - Aeroport
+    - Alacant
+    - Alameda
+    - Albalat dels Sorells
+    - Alberic
+    - Alboraia Palmaret
+    - Alboraia Peris Aragó
+    - Alfauir
+    - Alginet
+    - Almàssera
+    - Amado Granell - Montolivet
+    - Amistat
+    - Àngel Guimerà
+    - Aragó
+    - Ausiàs March
+    - Av. del Cid
+    - Ayora
+    - Bailén
+    - Benaguasil
+    - Benicalap
+    - Beniferri
+    - Benimaclet
+    - Benimàmet
+    - Benimodo
+    - Bétera
+    - Beteró
+    - Burjassot
+    - Burjassot - Godella
+    - Cabanyal
+    - Campament
+    - Campanar
+    - Campus
+    - Cantereria
+    - Canyamelar
+    - Carlet
+    - Castelló
+    - Ciutat Arts i Ciències - Justícia
+    - Colón
+    - Col·legi El Vedat
+    - Dr. Lluch
+    - El Clot
+    - Empalme
+    - Entrepins
+    - Espioca
+    - Estadi Ciutat de València
+    - Facultats - Manuel Broseta
+    - Faitanar
+    - Fira València
+    - Florista
+    - Foios
+    - Fondo de Benaguasil
+    - Font Almaguer
+    - Francesc Cubells
+    - Fuente del Jarro
+    - Gallipont - Torre del Virrei
+    - Garbí
+    - Godella
+    - Grau - La Marina
+    - Horta Vella
+    - Jesús
+    - L'Alcúdia
+    - L'Eliana
+    - La Cadena
+    - La Canyada
+    - La Carrasca
+    - La Coma
+    - La Cova
+    - La Granja
+    - La Pobla de Farnals
+    - La Pobla de Vallbona
+    - La Presa
+    - La Vallesa
+    - Les Carolines - Fira
+    - Ll. Llarga - Terramelar
+    - Llíria
+    - Machado
+    - Manises
+    - Marítim
+    - Marxalenes
+    - Mas del Rosari
+    - Masia de Traver
+    - Masies
+    - Massalavés
+    - Massamagrell
+    - Massarrojos
+    - Meliana
+    - Mislata
+    - Mislata - Almassil
+    - Moncada - Alfara
+    - Montesol
+    - Montortal
+    - Moreres
+    - Museros
+    - Natzaret
+    - Neptú
+    - Nou d'Octubre
+    - Oceanogràfic
+    - Omet
+    - Orriols
+    - Paiporta
+    - Palau de Congressos
+    - Parc Científic
+    - Paterna
+    - Patraix
+    - Picanya
+    - Picassent
+    - Pl. Espanya
+    - Platja Malva-rosa
+    - Platja les Arenes
+    - Pont de Fusta
+    - Quart de Poblet
+    - Quatre Carreres
+    - Rafelbunyol
+    - Realón
+    - Reus
+    - Riba-roja de Túria
+    - Rocafort
+    - Roses
+    - Russafa
+    - Safranar
+    - Sagunt
+    - Salt de l'Aigua
+    - Sant Isidre
+    - Sant Joan
+    - Sant Miquel dels Reis
+    - Sant Ramon
+    - Santa Rita
+    - Seminari - CEU
+    - Tarongers - Ernest Lluch
+    - Tomás y Valiente
+    - Torrent
+    - Torrent Avinguda
+    - Tossal del Rei
+    - Trànsits
+    - Trinitat
+    - Túria
+    - Universitat Politècnica
+    - València Sud
+    - València la Vella
+    - Vicent Andrés Estellés
+    - Vicente Zaragozá
+    - Xàtiva
+
+- intent: hi
+  examples: |
+    - hola
+    - hi
+    - hello
+    - hey
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+
+- intent: help
+  examples: |
+    - ayuda
+    - help
+    - ayuda por favor
+    - necesito ayuda
+    - necesito ayuda por favor
+
+- intent: input_stations
+  examples: |
+    - Desde [Tossal del Rei]{"entity": "station", "role": "departure"} hasta [Vicente Zaragozá]{"entity": "station", "role": "destination"}
+    - Desde [Jesús]{"entity": "station", "role": "departure"} hasta [Faitanar]{"entity": "station", "role": "destination"}
+    - Desde [Moncada - Alfara]{"entity": "station", "role": "departure"} hasta [Quart de Poblet]{"entity": "station", "role": "destination"}
+    - Desde [Francesc Cubells]{"entity": "station", "role": "departure"} hasta [L'Eliana]{"entity": "station", "role": "destination"}
+    - Desde [Russafa]{"entity": "station", "role": "departure"} hasta [Godella]{"entity": "station", "role": "destination"}
+    - Desde [Realón]{"entity": "station", "role": "departure"} hasta [La Cova]{"entity": "station", "role": "destination"}
+    - Desde [Aragó]{"entity": "station", "role": "departure"} hasta [Sant Ramon]{"entity": "station", "role": "destination"}
+    - Desde [Alberic]{"entity": "station", "role": "departure"} hasta [La Pobla de Farnals]{"entity": "station", "role": "destination"}
+    - Desde [Amado Granell - Montolivet]{"entity": "station", "role": "departure"} hasta [Garbí]{"entity": "station", "role": "destination"}
+    - Desde [La Pobla de Vallbona]{"entity": "station", "role": "departure"} hasta [La Carrasca]{"entity": "station", "role": "destination"}
+    - Desde [Albalat dels Sorells]{"entity": "station", "role": "departure"} hasta [Espioca]{"entity": "station", "role": "destination"}
+    - Desde [Moreres]{"entity": "station", "role": "departure"} hasta [Benimodo]{"entity": "station", "role": "destination"}
+    - Desde [Burjassot - Godella]{"entity": "station", "role": "departure"} hasta [Alginet]{"entity": "station", "role": "destination"}
+    - Desde [Alboraia Peris Aragó]{"entity": "station", "role": "departure"} hasta [Roses]{"entity": "station", "role": "destination"}
+    - Desde [Estadi Ciutat de València]{"entity": "station", "role": "departure"} hasta [Beteró]{"entity": "station", "role": "destination"}
+    - Desde [Benicalap]{"entity": "station", "role": "departure"} a [Cabanyal]{"entity": "station", "role": "destination"}
+    - Desde [Rocafort]{"entity": "station", "role": "departure"} a [Santa Rita]{"entity": "station", "role": "destination"}
+    - Desde [Nou d'Octubre]{"entity": "station", "role": "departure"} a [Bailén]{"entity": "station", "role": "destination"}
+    - Desde [Espioca]{"entity": "station", "role": "departure"} a [Moncada - Alfara]{"entity": "station", "role": "destination"}
+    - Desde [Campament]{"entity": "station", "role": "departure"} a [Garbí]{"entity": "station", "role": "destination"}
+    - Desde [Benimodo]{"entity": "station", "role": "departure"} a [Montesol]{"entity": "station", "role": "destination"}
+    - Desde [Mas del Rosari]{"entity": "station", "role": "departure"} a [Quatre Carreres]{"entity": "station", "role": "destination"}
+    - Desde [La Pobla de Vallbona]{"entity": "station", "role": "departure"} a [Palau de Congressos]{"entity": "station", "role": "destination"}
+    - Desde [Sant Joan]{"entity": "station", "role": "departure"} a [Natzaret]{"entity": "station", "role": "destination"}
+    - Desde [Fira València]{"entity": "station", "role": "departure"} a [Empalme]{"entity": "station", "role": "destination"}
+    - Desde [Fondo de Benaguasil]{"entity": "station", "role": "departure"} a [Amado Granell - Montolivet]{"entity": "station", "role": "destination"}
+    - Desde [La Coma]{"entity": "station", "role": "departure"} a [Les Carolines - Fira]{"entity": "station", "role": "destination"}
+    - Desde [Massarrojos]{"entity": "station", "role": "departure"} a [Platja les Arenes]{"entity": "station", "role": "destination"}
+    - Desde [Sant Miquel dels Reis]{"entity": "station", "role": "departure"} a [Dr. Lluch]{"entity": "station", "role": "destination"}
+    - Desde [Horta Vella]{"entity": "station", "role": "departure"} a [Masies]{"entity": "station", "role": "destination"}
+    - De [La Carrasca]{"entity": "station", "role": "departure"} hasta [Sant Joan]{"entity": "station", "role": "destination"}
+    - De [Safranar]{"entity": "station", "role": "departure"} hasta [Ayora]{"entity": "station", "role": "destination"}
+    - De [Sant Miquel dels Reis]{"entity": "station", "role": "departure"} hasta [València Sud]{"entity": "station", "role": "destination"}
+    - De [Benicalap]{"entity": "station", "role": "departure"} hasta [Aeroport]{"entity": "station", "role": "destination"}
+    - De [Bétera]{"entity": "station", "role": "departure"} hasta [Entrepins]{"entity": "station", "role": "destination"}
+    - De [Natzaret]{"entity": "station", "role": "departure"} hasta [Mislata]{"entity": "station", "role": "destination"}
+    - De [Tomás y Valiente]{"entity": "station", "role": "departure"} hasta [Museros]{"entity": "station", "role": "destination"}
+    - De [Campanar]{"entity": "station", "role": "departure"} hasta [Ausiàs March]{"entity": "station", "role": "destination"}
+    - De [Orriols]{"entity": "station", "role": "departure"} hasta [Platja les Arenes]{"entity": "station", "role": "destination"}
+    - De [Campus]{"entity": "station", "role": "departure"} hasta [Alameda]{"entity": "station", "role": "destination"}
+    - De [Universitat Politècnica]{"entity": "station", "role": "departure"} hasta [Av. del Cid]{"entity": "station", "role": "destination"}
+    - De [El Clot]{"entity": "station", "role": "departure"} hasta [La Granja]{"entity": "station", "role": "destination"}
+    - De [Paterna]{"entity": "station", "role": "departure"} hasta [L'Alcúdia]{"entity": "station", "role": "destination"}
+    - De [Rafelbunyol]{"entity": "station", "role": "departure"} hasta [Beniferri]{"entity": "station", "role": "destination"}
+    - De [Alberic]{"entity": "station", "role": "departure"} hasta [Cantereria]{"entity": "station", "role": "destination"}
+    - De [Tossal del Rei]{"entity": "station", "role": "departure"} a [Bailén]{"entity": "station", "role": "destination"}
+    - De [Moncada - Alfara]{"entity": "station", "role": "departure"} a [Sant Isidre]{"entity": "station", "role": "destination"}
+    - De [Campament]{"entity": "station", "role": "departure"} a [Marítim]{"entity": "station", "role": "destination"}
+    - De [Sant Ramon]{"entity": "station", "role": "departure"} a [Picanya]{"entity": "station", "role": "destination"}
+    - De [Rocafort]{"entity": "station", "role": "departure"} a [La Vallesa]{"entity": "station", "role": "destination"}
+    - De [Alacant]{"entity": "station", "role": "departure"} a [Vicent Andrés Estellés]{"entity": "station", "role": "destination"}
+    - De [Horta Vella]{"entity": "station", "role": "departure"} a [Almàssera]{"entity": "station", "role": "destination"}
+    - De [Campanar]{"entity": "station", "role": "departure"} a [Espioca]{"entity": "station", "role": "destination"}
+    - De [La Carrasca]{"entity": "station", "role": "departure"} a [Safranar]{"entity": "station", "role": "destination"}
+    - De [Paterna]{"entity": "station", "role": "departure"} a [Albalat dels Sorells]{"entity": "station", "role": "destination"}
+    - De [L'Alcúdia]{"entity": "station", "role": "departure"} a [Estadi Ciutat de València]{"entity": "station", "role": "destination"}
+    - De [L'Eliana]{"entity": "station", "role": "departure"} a [Oceanogràfic]{"entity": "station", "role": "destination"}
+    - De [Gallipont - Torre del Virrei]{"entity": "station", "role": "departure"} a [Mas del Rosari]{"entity": "station", "role": "destination"}
+    - De [Benicalap]{"entity": "station", "role": "departure"} a [Parc Científic]{"entity": "station", "role": "destination"}
+    - De [Picassent]{"entity": "station", "role": "departure"} a [Torrent]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Tossal del Rei]{"entity": "station", "role": "departure"} hasta [Llíria]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Ausiàs March]{"entity": "station", "role": "departure"} hasta [Garbí]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Ayora]{"entity": "station", "role": "departure"} hasta [Estadi Ciutat de València]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Av. del Cid]{"entity": "station", "role": "departure"} hasta [Mislata]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Quatre Carreres]{"entity": "station", "role": "departure"} hasta [El Clot]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Alacant]{"entity": "station", "role": "departure"} hasta [Campament]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Reus]{"entity": "station", "role": "departure"} hasta [Castelló]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Seminari - CEU]{"entity": "station", "role": "departure"} hasta [Beteró]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Sant Miquel dels Reis]{"entity": "station", "role": "departure"} hasta [La Cova]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Moncada - Alfara]{"entity": "station", "role": "departure"} hasta [Machado]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Mas del Rosari]{"entity": "station", "role": "departure"} hasta [Alameda]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Montortal]{"entity": "station", "role": "departure"} hasta [Oceanogràfic]{"entity": "station", "role": "destination"}
+    - Quiero ir de [La Canyada]{"entity": "station", "role": "departure"} hasta [Masia de Traver]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Benimodo]{"entity": "station", "role": "departure"} hasta [Benicalap]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Ll. Llarga - Terramelar]{"entity": "station", "role": "departure"} hasta [Rocafort]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Ciutat Arts i Ciències - Justícia]{"entity": "station", "role": "departure"} hasta [Montortal]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Russafa]{"entity": "station", "role": "departure"} hasta [Pont de Fusta]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Amado Granell - Montolivet]{"entity": "station", "role": "departure"} hasta [Foios]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Garbí]{"entity": "station", "role": "departure"} hasta [La Pobla de Farnals]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Fuente del Jarro]{"entity": "station", "role": "departure"} hasta [Campament]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Col·legi El Vedat]{"entity": "station", "role": "departure"} hasta [Paiporta]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Torrent]{"entity": "station", "role": "departure"} hasta [Salt de l'Aigua]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Fira València]{"entity": "station", "role": "departure"} hasta [Castelló]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Benimodo]{"entity": "station", "role": "departure"} hasta [Roses]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Machado]{"entity": "station", "role": "departure"} hasta [Les Carolines - Fira]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Colón]{"entity": "station", "role": "departure"} hasta [À Punt]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Alboraia Palmaret]{"entity": "station", "role": "departure"} hasta [Museros]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Neptú]{"entity": "station", "role": "departure"} hasta [Rocafort]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Safranar]{"entity": "station", "role": "departure"} hasta [Santa Rita]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Moreres]{"entity": "station", "role": "departure"} hasta [Marítim]{"entity": "station", "role": "destination"}
+    - Quiero ir de [La Carrasca]{"entity": "station", "role": "departure"} a [Entrepins]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Fuente del Jarro]{"entity": "station", "role": "departure"} a [Reus]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Vicent Andrés Estellés]{"entity": "station", "role": "departure"} a [Universitat Politècnica]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Meliana]{"entity": "station", "role": "departure"} a [Safranar]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Campanar]{"entity": "station", "role": "departure"} a [Alfauir]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Campament]{"entity": "station", "role": "departure"} a [L'Eliana]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Francesc Cubells]{"entity": "station", "role": "departure"} a [Ausiàs March]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Fira València]{"entity": "station", "role": "departure"} a [Picanya]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Faitanar]{"entity": "station", "role": "departure"} a [Picassent]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Xàtiva]{"entity": "station", "role": "departure"} a [Estadi Ciutat de València]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Pl. Espanya]{"entity": "station", "role": "departure"} a [Montortal]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Amistat]{"entity": "station", "role": "departure"} a [Seminari - CEU]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Alboraia Peris Aragó]{"entity": "station", "role": "departure"} a [Platja Malva-rosa]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Mislata]{"entity": "station", "role": "departure"} a [Oceanogràfic]{"entity": "station", "role": "destination"}
+    - Quiero ir de [Trànsits]{"entity": "station", "role": "departure"} a [Trinitat]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Colón]{"entity": "station", "role": "departure"} a [Campanar]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Font Almaguer]{"entity": "station", "role": "departure"} a [Cantereria]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [La Cadena]{"entity": "station", "role": "departure"} a [Riba-roja de Túria]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Masia de Traver]{"entity": "station", "role": "departure"} a [Masies]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Tomás y Valiente]{"entity": "station", "role": "departure"} a [Benaguasil]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Alberic]{"entity": "station", "role": "departure"} a [Horta Vella]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [L'Alcúdia]{"entity": "station", "role": "departure"} a [Torrent]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [La Coma]{"entity": "station", "role": "departure"} a [Sant Isidre]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Torrent Avinguda]{"entity": "station", "role": "departure"} a [Manises]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Palau de Congressos]{"entity": "station", "role": "departure"} a [Benimàmet]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Gallipont - Torre del Virrei]{"entity": "station", "role": "departure"} a [Moncada - Alfara]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Moreres]{"entity": "station", "role": "departure"} a [Empalme]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Orriols]{"entity": "station", "role": "departure"} a [Campament]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Cabanyal]{"entity": "station", "role": "departure"} a [Alboraia Palmaret]{"entity": "station", "role": "destination"}
+    - Quiero ir desde [Vicente Zaragozá]{"entity": "station", "role": "departure"} a [Trinitat]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Massarrojos]{"entity": "station", "role": "departure"} hasta [Gallipont - Torre del Virrei]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Horta Vella]{"entity": "station", "role": "departure"} hasta [Facultats - Manuel Broseta]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Dr. Lluch]{"entity": "station", "role": "departure"} hasta [Bétera]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Francesc Cubells]{"entity": "station", "role": "departure"} hasta [Fondo de Benaguasil]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Sant Miquel dels Reis]{"entity": "station", "role": "departure"} hasta [Col·legi El Vedat]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Mislata - Almassil]{"entity": "station", "role": "departure"} hasta [Trinitat]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Rafelbunyol]{"entity": "station", "role": "departure"} hasta [Burjassot - Godella]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [La Presa]{"entity": "station", "role": "departure"} hasta [Fuente del Jarro]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Godella]{"entity": "station", "role": "departure"} hasta [Cantereria]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Nou d'Octubre]{"entity": "station", "role": "departure"} hasta [Sant Isidre]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Ll. Llarga - Terramelar]{"entity": "station", "role": "departure"} hasta [Alberic]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Burjassot]{"entity": "station", "role": "departure"} hasta [Roses]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Espioca]{"entity": "station", "role": "departure"} hasta [Paiporta]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Alacant]{"entity": "station", "role": "departure"} hasta [Moncada - Alfara]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Neptú]{"entity": "station", "role": "departure"} hasta [Masia de Traver]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Xàtiva]{"entity": "station", "role": "departure"} hasta [Aeroport]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Ausiàs March]{"entity": "station", "role": "departure"} hasta [Oceanogràfic]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Font Almaguer]{"entity": "station", "role": "departure"} hasta [Pl. Espanya]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Facultats - Manuel Broseta]{"entity": "station", "role": "departure"} hasta [La Granja]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Safranar]{"entity": "station", "role": "departure"} hasta [Campament]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Mislata]{"entity": "station", "role": "departure"} hasta [Picassent]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Montortal]{"entity": "station", "role": "departure"} hasta [Seminari - CEU]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Tossal del Rei]{"entity": "station", "role": "departure"} hasta [Mas del Rosari]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Fuente del Jarro]{"entity": "station", "role": "departure"} hasta [La Pobla de Farnals]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Rocafort]{"entity": "station", "role": "departure"} hasta [Burjassot]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Parc Científic]{"entity": "station", "role": "departure"} hasta [Alacant]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Campus]{"entity": "station", "role": "departure"} hasta [Mislata - Almassil]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Massalavés]{"entity": "station", "role": "departure"} hasta [Empalme]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Cabanyal]{"entity": "station", "role": "departure"} hasta [Vicent Andrés Estellés]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Àngel Guimerà]{"entity": "station", "role": "departure"} hasta [Gallipont - Torre del Virrei]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [La Cova]{"entity": "station", "role": "departure"} a [Safranar]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Alacant]{"entity": "station", "role": "departure"} a [Fuente del Jarro]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Beniferri]{"entity": "station", "role": "departure"} a [Massarrojos]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Av. del Cid]{"entity": "station", "role": "departure"} a [Patraix]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Tomás y Valiente]{"entity": "station", "role": "departure"} a [Santa Rita]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Aragó]{"entity": "station", "role": "departure"} a [Albalat dels Sorells]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Marxalenes]{"entity": "station", "role": "departure"} a [Montesol]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Paiporta]{"entity": "station", "role": "departure"} a [Seminari - CEU]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Trinitat]{"entity": "station", "role": "departure"} a [Fira València]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Florista]{"entity": "station", "role": "departure"} a [Font Almaguer]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [La Presa]{"entity": "station", "role": "departure"} a [Àngel Guimerà]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Pl. Espanya]{"entity": "station", "role": "departure"} a [Alboraia Peris Aragó]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Jesús]{"entity": "station", "role": "departure"} a [Les Carolines - Fira]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Omet]{"entity": "station", "role": "departure"} a [Realón]{"entity": "station", "role": "destination"}
+    - Quiero ir de la estacion [Campanar]{"entity": "station", "role": "departure"} a [Alberic]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Xàtiva]{"entity": "station", "role": "departure"} a [Faitanar]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Av. del Cid]{"entity": "station", "role": "departure"} a [Santa Rita]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Moreres]{"entity": "station", "role": "departure"} a [Entrepins]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Safranar]{"entity": "station", "role": "departure"} a [Florista]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [L'Eliana]{"entity": "station", "role": "departure"} a [La Granja]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Marxalenes]{"entity": "station", "role": "departure"} a [Marítim]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [La Pobla de Farnals]{"entity": "station", "role": "departure"} a [Gallipont - Torre del Virrei]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Salt de l'Aigua]{"entity": "station", "role": "departure"} a [Colón]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Castelló]{"entity": "station", "role": "departure"} a [Sagunt]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Alberic]{"entity": "station", "role": "departure"} a [Rocafort]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Francesc Cubells]{"entity": "station", "role": "departure"} a [Alboraia Peris Aragó]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Ll. Llarga - Terramelar]{"entity": "station", "role": "departure"} a [Benimodo]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Empalme]{"entity": "station", "role": "departure"} a [Ciutat Arts i Ciències - Justícia]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [La Pobla de Vallbona]{"entity": "station", "role": "departure"} a [Llíria]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Tarongers - Ernest Lluch]{"entity": "station", "role": "departure"} a [Parc Científic]{"entity": "station", "role": "destination"}
+    - [Santa Rita]{"entity": "station", "role": "departure"} a [Montortal]{"entity": "station", "role": "destination"}
+    - [L'Eliana]{"entity": "station", "role": "departure"} a [Torrent Avinguda]{"entity": "station", "role": "destination"}
+    - [Alginet]{"entity": "station", "role": "departure"} a [Alfauir]{"entity": "station", "role": "destination"}
+    - [Aragó]{"entity": "station", "role": "departure"} a [Burjassot]{"entity": "station", "role": "destination"}
+    - [Burjassot - Godella]{"entity": "station", "role": "departure"} a [Marxalenes]{"entity": "station", "role": "destination"}
+    - [Garbí]{"entity": "station", "role": "departure"} a [Canyamelar]{"entity": "station", "role": "destination"}
+    - [Picassent]{"entity": "station", "role": "departure"} a [La Cadena]{"entity": "station", "role": "destination"}
+    - [Font Almaguer]{"entity": "station", "role": "departure"} a [Faitanar]{"entity": "station", "role": "destination"}
+    - [Mislata - Almassil]{"entity": "station", "role": "departure"} a [Mas del Rosari]{"entity": "station", "role": "destination"}
+    - [Espioca]{"entity": "station", "role": "departure"} a [Sant Joan]{"entity": "station", "role": "destination"}
+    - [Rocafort]{"entity": "station", "role": "departure"} a [Tomás y Valiente]{"entity": "station", "role": "destination"}
+    - [Marítim]{"entity": "station", "role": "departure"} a [Facultats - Manuel Broseta]{"entity": "station", "role": "destination"}
+    - [La Presa]{"entity": "station", "role": "departure"} a [Benimodo]{"entity": "station", "role": "destination"}
+    - [Tarongers - Ernest Lluch]{"entity": "station", "role": "departure"} a [Jesús]{"entity": "station", "role": "destination"}
+    - [Ausiàs March]{"entity": "station", "role": "departure"} a [Beniferri]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [La Cova]{"entity": "station", "role": "departure"} a [Moncada - Alfara]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Marítim]{"entity": "station", "role": "departure"} a [Canyamelar]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Tossal del Rei]{"entity": "station", "role": "departure"} a [Picanya]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Campament]{"entity": "station", "role": "departure"} a [Alboraia Palmaret]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Colón]{"entity": "station", "role": "departure"} a [Paiporta]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Natzaret]{"entity": "station", "role": "departure"} a [La Coma]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [La Canyada]{"entity": "station", "role": "departure"} a [Fuente del Jarro]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Horta Vella]{"entity": "station", "role": "departure"} a [València Sud]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Museros]{"entity": "station", "role": "departure"} a [Rocafort]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Cantereria]{"entity": "station", "role": "departure"} a [Moreres]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Les Carolines - Fira]{"entity": "station", "role": "departure"} a [Gallipont - Torre del Virrei]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Nou d'Octubre]{"entity": "station", "role": "departure"} a [Meliana]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Castelló]{"entity": "station", "role": "departure"} a [La Pobla de Farnals]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Francesc Cubells]{"entity": "station", "role": "departure"} a [Santa Rita]{"entity": "station", "role": "destination"}
+    - Quiero ir desde la estacion [Beniferri]{"entity": "station", "role": "departure"} a [Col·legi El Vedat]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Picanya]{"entity": "station", "role": "departure"} hasta [Universitat Politècnica]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Pl. Espanya]{"entity": "station", "role": "departure"} hasta [Paiporta]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Benimaclet]{"entity": "station", "role": "departure"} hasta [Horta Vella]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Santa Rita]{"entity": "station", "role": "departure"} hasta [Moreres]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Oceanogràfic]{"entity": "station", "role": "departure"} hasta [Font Almaguer]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Bétera]{"entity": "station", "role": "departure"} hasta [Burjassot - Godella]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Colón]{"entity": "station", "role": "departure"} hasta [Moncada - Alfara]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Trànsits]{"entity": "station", "role": "departure"} hasta [Roses]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [L'Eliana]{"entity": "station", "role": "departure"} hasta [Carlet]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Riba-roja de Túria]{"entity": "station", "role": "departure"} hasta [Alameda]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Omet]{"entity": "station", "role": "departure"} hasta [Campus]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Museros]{"entity": "station", "role": "departure"} hasta [Mislata - Almassil]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Tomás y Valiente]{"entity": "station", "role": "departure"} hasta [Ciutat Arts i Ciències - Justícia]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Fondo de Benaguasil]{"entity": "station", "role": "departure"} hasta [Palau de Congressos]{"entity": "station", "role": "destination"}
+    - Me gustaría ir desde [Garbí]{"entity": "station", "role": "departure"} hasta [Aeroport]{"entity": "station", "role": "destination"}
+    - Desde la estación [Carlet]{"entity": "station", "role": "departure"} hasta la estacion [Oceanogràfic]{"entity": "station", "role": "destination"}
+    - Desde la estación [Empalme]{"entity": "station", "role": "departure"} hasta la estacion [Torrent Avinguda]{"entity": "station", "role": "destination"}
+    - Desde la estación [Nou d'Octubre]{"entity": "station", "role": "departure"} hasta la estacion [Masies]{"entity": "station", "role": "destination"}
+    - Desde la estación [Alginet]{"entity": "station", "role": "departure"} hasta la estacion [Francesc Cubells]{"entity": "station", "role": "destination"}
+    - Desde la estación [Trànsits]{"entity": "station", "role": "departure"} hasta la estacion [Alacant]{"entity": "station", "role": "destination"}
+    - Desde la estación [Amado Granell - Montolivet]{"entity": "station", "role": "departure"} hasta la estacion [Meliana]{"entity": "station", "role": "destination"}
+    - Desde la estación [València Sud]{"entity": "station", "role": "departure"} hasta la estacion [Cantereria]{"entity": "station", "role": "destination"}
+    - Desde la estación [Patraix]{"entity": "station", "role": "departure"} hasta la estacion [Almàssera]{"entity": "station", "role": "destination"}
+    - Desde la estación [Castelló]{"entity": "station", "role": "departure"} hasta la estacion [Tossal del Rei]{"entity": "station", "role": "destination"}
+    - Desde la estación [La Cova]{"entity": "station", "role": "departure"} hasta la estacion [Ciutat Arts i Ciències - Justícia]{"entity": "station", "role": "destination"}
+    - Desde la estación [La Canyada]{"entity": "station", "role": "departure"} hasta la estacion [Tomás y Valiente]{"entity": "station", "role": "destination"}
+    - Desde la estación [Montesol]{"entity": "station", "role": "departure"} hasta la estacion [Sagunt]{"entity": "station", "role": "destination"}
+    - Desde la estación [Platja Malva-rosa]{"entity": "station", "role": "departure"} hasta la estacion [Túria]{"entity": "station", "role": "destination"}
+    - Desde la estación [Col·legi El Vedat]{"entity": "station", "role": "departure"} hasta la estacion [Burjassot]{"entity": "station", "role": "destination"}
+    - Desde la estación [Santa Rita]{"entity": "station", "role": "departure"} hasta la estacion [Alameda]{"entity": "station", "role": "destination"}
+    - Desde la estación [Dr. Lluch]{"entity": "station", "role": "departure"} a la estacion [Garbí]{"entity": "station", "role": "destination"}
+    - Desde la estación [Sagunt]{"entity": "station", "role": "departure"} a la estacion [Realón]{"entity": "station", "role": "destination"}
+    - Desde la estación [Les Carolines - Fira]{"entity": "station", "role": "departure"} a la estacion [Ayora]{"entity": "station", "role": "destination"}
+    - Desde la estación [Alboraia Peris Aragó]{"entity": "station", "role": "departure"} a la estacion [Av. del Cid]{"entity": "station", "role": "destination"}
+    - Desde la estación [Mas del Rosari]{"entity": "station", "role": "departure"} a la estacion [Ciutat Arts i Ciències - Justícia]{"entity": "station", "role": "destination"}
+    - Desde la estación [Campus]{"entity": "station", "role": "departure"} a la estacion [Benimodo]{"entity": "station", "role": "destination"}
+    - Desde la estación [Pont de Fusta]{"entity": "station", "role": "departure"} a la estacion [La Cadena]{"entity": "station", "role": "destination"}
+    - Desde la estación [València la Vella]{"entity": "station", "role": "departure"} a la estacion [Ausiàs March]{"entity": "station", "role": "destination"}
+    - Desde la estación [Natzaret]{"entity": "station", "role": "departure"} a la estacion [Oceanogràfic]{"entity": "station", "role": "destination"}
+    - Desde la estación [Amistat]{"entity": "station", "role": "departure"} a la estacion [Beniferri]{"entity": "station", "role": "destination"}
+    - Desde la estación [Salt de l'Aigua]{"entity": "station", "role": "departure"} a la estacion [Massarrojos]{"entity": "station", "role": "destination"}
+    - Desde la estación [Rafelbunyol]{"entity": "station", "role": "departure"} a la estacion [Almàssera]{"entity": "station", "role": "destination"}
+    - Desde la estación [Riba-roja de Túria]{"entity": "station", "role": "departure"} a la estacion [Platja les Arenes]{"entity": "station", "role": "destination"}
+    - Desde la estación [Meliana]{"entity": "station", "role": "departure"} a la estacion [Entrepins]{"entity": "station", "role": "destination"}
+    - Desde la estación [Canyamelar]{"entity": "station", "role": "departure"} a la estacion [Nou d'Octubre]{"entity": "station", "role": "destination"}
+    - De la estación [Les Carolines - Fira]{"entity": "station", "role": "departure"} hasta la estacion [Castelló]{"entity": "station", "role": "destination"}
+    - De la estación [Godella]{"entity": "station", "role": "departure"} hasta la estacion [Masies]{"entity": "station", "role": "destination"}
+    - De la estación [Tossal del Rei]{"entity": "station", "role": "departure"} hasta la estacion [La Canyada]{"entity": "station", "role": "destination"}
+    - De la estación [Neptú]{"entity": "station", "role": "departure"} hasta la estacion [Mislata - Almassil]{"entity": "station", "role": "destination"}
+    - De la estación [Facultats - Manuel Broseta]{"entity": "station", "role": "departure"} hasta la estacion [Aragó]{"entity": "station", "role": "destination"}
+    - De la estación [Massamagrell]{"entity": "station", "role": "departure"} hasta la estacion [Alginet]{"entity": "station", "role": "destination"}
+    - De la estación [La Coma]{"entity": "station", "role": "departure"} hasta la estacion [La Pobla de Vallbona]{"entity": "station", "role": "destination"}
+    - De la estación [Fuente del Jarro]{"entity": "station", "role": "departure"} hasta la estacion [Riba-roja de Túria]{"entity": "station", "role": "destination"}
+    - De la estación [Manises]{"entity": "station", "role": "departure"} hasta la estacion [Alfauir]{"entity": "station", "role": "destination"}
+    - De la estación [Col·legi El Vedat]{"entity": "station", "role": "departure"} hasta la estacion [Omet]{"entity": "station", "role": "destination"}
+    - De la estación [València Sud]{"entity": "station", "role": "departure"} hasta la estacion [Picassent]{"entity": "station", "role": "destination"}
+    - De la estación [Montesol]{"entity": "station", "role": "departure"} hasta la estacion [La Cadena]{"entity": "station", "role": "destination"}
+    - De la estación [L'Alcúdia]{"entity": "station", "role": "departure"} hasta la estacion [Massarrojos]{"entity": "station", "role": "destination"}
+    - De la estación [Platja Malva-rosa]{"entity": "station", "role": "departure"} hasta la estacion [La Vallesa]{"entity": "station", "role": "destination"}
+    - De la estación [Ciutat Arts i Ciències - Justícia]{"entity": "station", "role": "departure"} hasta la estacion [Campament]{"entity": "station", "role": "destination"}
+    - De la estación [Alboraia Palmaret]{"entity": "station", "role": "departure"} a la estacion [Alginet]{"entity": "station", "role": "destination"}
+    - De la estación [Machado]{"entity": "station", "role": "departure"} a la estacion [Xàtiva]{"entity": "station", "role": "destination"}
+    - De la estación [Marítim]{"entity": "station", "role": "departure"} a la estacion [Facultats - Manuel Broseta]{"entity": "station", "role": "destination"}
+    - De la estación [Campanar]{"entity": "station", "role": "departure"} a la estacion [Alameda]{"entity": "station", "role": "destination"}
+    - De la estación [Vicente Zaragozá]{"entity": "station", "role": "departure"} a la estacion [La Vallesa]{"entity": "station", "role": "destination"}
+    - De la estación [Seminari - CEU]{"entity": "station", "role": "departure"} a la estacion [Natzaret]{"entity": "station", "role": "destination"}
+    - De la estación [Roses]{"entity": "station", "role": "departure"} a la estacion [Vicent Andrés Estellés]{"entity": "station", "role": "destination"}
+    - De la estación [Av. del Cid]{"entity": "station", "role": "departure"} a la estacion [València la Vella]{"entity": "station", "role": "destination"}
+    - De la estación [Masia de Traver]{"entity": "station", "role": "departure"} a la estacion [Paterna]{"entity": "station", "role": "destination"}
+    - De la estación [Benimaclet]{"entity": "station", "role": "departure"} a la estacion [Sagunt]{"entity": "station", "role": "destination"}
+    - De la estación [Moncada - Alfara]{"entity": "station", "role": "departure"} a la estacion [Safranar]{"entity": "station", "role": "destination"}
+    - De la estación [Parc Científic]{"entity": "station", "role": "departure"} a la estacion [Garbí]{"entity": "station", "role": "destination"}
+    - De la estación [L'Alcúdia]{"entity": "station", "role": "departure"} a la estacion [Benicalap]{"entity": "station", "role": "destination"}
+    - De la estación [À Punt]{"entity": "station", "role": "departure"} a la estacion [Horta Vella]{"entity": "station", "role": "destination"}
+    - De la estación [Alacant]{"entity": "station", "role": "departure"} a la estacion [Campus]{"entity": "station", "role": "destination"}
+    - Voy de [Cantereria]{"entity": "station", "role": "departure"} hasta [Colón]{"entity": "station", "role": "destination"}- Voy de [Cantereria]{"entity": "station", "role": "departure"} a [Colón]{"entity": "station", "role": "destination"}
+    - Voy de [Aeroport]{"entity": "station", "role": "departure"} hasta [Pont de Fusta]{"entity": "station", "role": "destination"}- Voy de [Aeroport]{"entity": "station", "role": "departure"} a [Pont de Fusta]{"entity": "station", "role": "destination"}
+    - Voy de [Parc Científic]{"entity": "station", "role": "departure"} hasta [La Vallesa]{"entity": "station", "role": "destination"}- Voy de [Parc Científic]{"entity": "station", "role": "departure"} a [La Vallesa]{"entity": "station", "role": "destination"}
+    - Voy de [Machado]{"entity": "station", "role": "departure"} hasta [Benimàmet]{"entity": "station", "role": "destination"}- Voy de [Machado]{"entity": "station", "role": "departure"} a [Benimàmet]{"entity": "station", "role": "destination"}
+    - Voy de [Sant Isidre]{"entity": "station", "role": "departure"} hasta [Neptú]{"entity": "station", "role": "destination"}- Voy de [Sant Isidre]{"entity": "station", "role": "departure"} a [Neptú]{"entity": "station", "role": "destination"}
+    - Voy de [Sagunt]{"entity": "station", "role": "departure"} hasta [Mas del Rosari]{"entity": "station", "role": "destination"}- Voy de [Sagunt]{"entity": "station", "role": "departure"} a [Mas del Rosari]{"entity": "station", "role": "destination"}
+    - Voy de [Castelló]{"entity": "station", "role": "departure"} hasta [Massamagrell]{"entity": "station", "role": "destination"}- Voy de [Castelló]{"entity": "station", "role": "departure"} a [Massamagrell]{"entity": "station", "role": "destination"}
+    - Voy de [València Sud]{"entity": "station", "role": "departure"} hasta [El Clot]{"entity": "station", "role": "destination"}- Voy de [València Sud]{"entity": "station", "role": "departure"} a [El Clot]{"entity": "station", "role": "destination"}
+    - Voy de [Alboraia Peris Aragó]{"entity": "station", "role": "departure"} hasta [Massarrojos]{"entity": "station", "role": "destination"}- Voy de [Alboraia Peris Aragó]{"entity": "station", "role": "departure"} a [Massarrojos]{"entity": "station", "role": "destination"}
+    - Voy de [Mislata - Almassil]{"entity": "station", "role": "departure"} hasta [La Canyada]{"entity": "station", "role": "destination"}- Voy de [Mislata - Almassil]{"entity": "station", "role": "departure"} a [La Canyada]{"entity": "station", "role": "destination"}
+    - Voy de [Canyamelar]{"entity": "station", "role": "departure"} hasta [Trànsits]{"entity": "station", "role": "destination"}- Voy de [Canyamelar]{"entity": "station", "role": "departure"} a [Trànsits]{"entity": "station", "role": "destination"}
+    - Voy de [Alfauir]{"entity": "station", "role": "departure"} hasta [Garbí]{"entity": "station", "role": "destination"}- Voy de [Alfauir]{"entity": "station", "role": "departure"} a [Garbí]{"entity": "station", "role": "destination"}
+    - Voy de [Burjassot - Godella]{"entity": "station", "role": "departure"} hasta [Quart de Poblet]{"entity": "station", "role": "destination"}- Voy de [Burjassot - Godella]{"entity": "station", "role": "departure"} a [Quart de Poblet]{"entity": "station", "role": "destination"}
+    - Voy de [La Coma]{"entity": "station", "role": "departure"} hasta [Alboraia Palmaret]{"entity": "station", "role": "destination"}- Voy de [La Coma]{"entity": "station", "role": "departure"} a [Alboraia Palmaret]{"entity": "station", "role": "destination"}
+    - Voy de [Tossal del Rei]{"entity": "station", "role": "departure"} hasta [Omet]{"entity": "station", "role": "destination"}- Voy de [Tossal del Rei]{"entity": "station", "role": "departure"} a [Omet]{"entity": "station", "role": "destination"}

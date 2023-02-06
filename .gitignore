@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#rasa
+.rasa
+models/
+presentación.pptx
+~$presentación.pptx

@@ -1,0 +1,49 @@
+version: "3.1"
+
+intents:
+  - hi
+  - help
+  - input_stations
+
+entities:
+   - station:
+       roles:
+       - departure
+       - destination
+
+slots:
+  departure:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: station
+      role: departure
+
+  destination:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: station
+      role: destination
+
+actions:
+  - action_tram
+
+responses:
+  utter_hi:
+  - text: "Hola! ¿De que estación a que estación quieres ir?"
+
+  utter_help:
+  - text: "Algunos ejemplos de respuestas que puedes dar son: 'Universitat Politècnica a Colón' o De la estación de Empalme a la estación de Xàtiva."
+
+  utter_stations:
+  - text: "{departure} --> {destination}:"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+config:
+  store_entities_as_slots: true

@@ -16,6 +16,7 @@ pipeline:
   - name: SpacyFeaturizer
     pooling: mean
   - name: LexicalSyntacticFeaturizer
+  - name: RegexFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1
